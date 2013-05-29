@@ -1,0 +1,702 @@
+/* Fonts */
+@font-face {
+    font-family: 'BlanchCapsLight';
+    src: url('fonts/blanch_caps_light-webfont.eot');
+    src: url('fonts/blanch_caps_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/blanch_caps_light-webfont.woff') format('woff'),
+         url('fonts/blanch_caps_light-webfont.ttf') format('truetype'),
+         url('fonts/blanch_caps_light-webfont.svg#blanchcaps_light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Fonticons';
+  src: url('fonts/fonticons-regular-webfont.eot?v=1.0');
+  src: url('fonts/fonticons-regular-webfont.eot?#iefix&v=1.0') format('embedded-opentype'),
+    url('fonts/fonticons-regular-webfont.woff?v=1.0') format('woff'),
+    url('fonts/fonticons-regular-webfont.ttf?v=1.0') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'MissionGothicLight';
+    src: url('fonts/mission_gothic_light-webfont.eot');
+    src: url('fonts/mission_gothic_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/mission_gothic_light-webfont.woff') format('woff'),
+         url('fonts/mission_gothic_light-webfont.ttf') format('truetype'),
+         url('fonts/mission_gothic_light-webfont.svg#mission_gothiclight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MissionGothicBold';
+    src: url('fonts/mission_gothic_bold-webfont.eot');
+    src: url('fonts/mission_gothic_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/mission_gothic_bold-webfont.woff') format('woff'),
+         url('fonts/mission_gothic_bold-webfont.ttf') format('truetype'),
+         url('fonts/mission_gothic_bold-webfont.svg#mission_gothicbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'Fonticons';
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+
+  /* sprites.less reset */
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+}
+/* more sprites.less reset */
+.icon-white,
+.nav-pills > .active > a > [class^="icon-"],
+.nav-pills > .active > a > [class*=" icon-"],
+.nav-list > .active > a > [class^="icon-"],
+.nav-list > .active > a > [class*=" icon-"],
+.navbar-inverse .nav > .active > a > [class^="icon-"],
+.navbar-inverse .nav > .active > a > [class*=" icon-"],
+.dropdown-menu > li > a:hover > [class^="icon-"],
+.dropdown-menu > li > a:hover > [class*=" icon-"],
+.dropdown-menu > .active > a > [class^="icon-"],
+.dropdown-menu > .active > a > [class*=" icon-"],
+.dropdown-submenu:hover > a > [class^="icon-"],
+.dropdown-submenu:hover > a > [class*=" icon-"] {
+  background-image: none;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+/* makes sure icons active on rollover in links */
+a [class^="icon-"],
+a [class*=" icon-"] {
+  display: inline-block;
+}
+/* makes the font 33% larger relative to the icon container */
+.icon-large:before {
+  vertical-align: -10%;
+  font-size: 1.3333333333333333em;
+}
+.btn [class^="icon-"],
+.nav [class^="icon-"],
+.btn [class*=" icon-"],
+.nav [class*=" icon-"] {
+  display: inline;
+  /* keeps button heights with and without icons the same */
+
+}
+.btn [class^="icon-"].icon-large,
+.nav [class^="icon-"].icon-large,
+.btn [class*=" icon-"].icon-large,
+.nav [class*=" icon-"].icon-large {
+  line-height: .9em;
+}
+.btn [class^="icon-"].icon-spin,
+.nav [class^="icon-"].icon-spin,
+.btn [class*=" icon-"].icon-spin,
+.nav [class*=" icon-"].icon-spin {
+  display: inline-block;
+}
+.nav-tabs [class^="icon-"],
+.nav-pills [class^="icon-"],
+.nav-tabs [class*=" icon-"],
+.nav-pills [class*=" icon-"] {
+  /* keeps button heights with and without icons the same */
+
+}
+.nav-tabs [class^="icon-"],
+.nav-pills [class^="icon-"],
+.nav-tabs [class*=" icon-"],
+.nav-pills [class*=" icon-"],
+.nav-tabs [class^="icon-"].icon-large,
+.nav-pills [class^="icon-"].icon-large,
+.nav-tabs [class*=" icon-"].icon-large,
+.nav-pills [class*=" icon-"].icon-large {
+  line-height: .9em;
+}
+li [class^="icon-"],
+.nav li [class^="icon-"],
+li [class*=" icon-"],
+.nav li [class*=" icon-"] {
+  display: inline-block;
+  width: 1.25em;
+  text-align: center;
+}
+li [class^="icon-"].icon-large,
+.nav li [class^="icon-"].icon-large,
+li [class*=" icon-"].icon-large,
+.nav li [class*=" icon-"].icon-large {
+  /* increased font size for icon-large */
+
+  width: 1.5625em;
+}
+ul.icons {
+  list-style-type: none;
+  text-indent: -0.75em;
+}
+ul.icons li [class^="icon-"],
+ul.icons li [class*=" icon-"] {
+  width: .75em;
+}
+.icon-muted {
+  color: #eeeeee;
+}
+.icon-border {
+  border: solid 1px #eeeeee;
+  padding: .2em .25em .15em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.icon-2x {
+  font-size: 2em;
+}
+.icon-2x.icon-border {
+  border-width: 2px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.icon-3x {
+  font-size: 3em;
+}
+.icon-3x.icon-border {
+  border-width: 3px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.icon-4x {
+  font-size: 4em;
+}
+.icon-4x.icon-border {
+  border-width: 4px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+[class^="icon-"].pull-left,
+[class*=" icon-"].pull-left {
+  margin-right: .3em;
+}
+[class^="icon-"].pull-right,
+[class*=" icon-"].pull-right {
+  margin-left: .3em;
+}
+.btn [class^="icon-"].pull-left.icon-2x,
+.btn [class*=" icon-"].pull-left.icon-2x,
+.btn [class^="icon-"].pull-right.icon-2x,
+.btn [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .18em;
+}
+.btn [class^="icon-"].icon-spin.icon-large,
+.btn [class*=" icon-"].icon-spin.icon-large {
+  line-height: .8em;
+}
+.btn.btn-small [class^="icon-"].pull-left.icon-2x,
+.btn.btn-small [class*=" icon-"].pull-left.icon-2x,
+.btn.btn-small [class^="icon-"].pull-right.icon-2x,
+.btn.btn-small [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .25em;
+}
+.btn.btn-large [class^="icon-"],
+.btn.btn-large [class*=" icon-"] {
+  margin-top: 0;
+}
+.btn.btn-large [class^="icon-"].pull-left.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-left.icon-2x,
+.btn.btn-large [class^="icon-"].pull-right.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .05em;
+}
+.btn.btn-large [class^="icon-"].pull-left.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-left.icon-2x {
+  margin-right: .2em;
+}
+.btn.btn-large [class^="icon-"].pull-right.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+  margin-left: .2em;
+}
+
+/*  Fonticons uses the Unicode Private Use Area (PUA) to ensure screen
+    readers do not read off random characters that represent icons */
+.icon-instagram-sign:before       { content: "\f000"; }
+.icon-instagram:before            { content: "\f001"; }
+.icon-youtube-sign:before         { content: "\f002"; }
+.icon-youtube:before              { content: "\f003"; }
+.icon-tumblr-sign:before          { content: "\f004"; }
+.icon-tumblr:before               { content: "\f005"; }
+.icon-klout-sign:before           { content: "\f006"; }
+.icon-klout:before                { content: "\f007"; }
+.icon-yelp-sign:before            { content: "\f008"; }
+.icon-yelp:before                 { content: "\f009"; }
+.icon-spotify-sign:before         { content: "\f012"; }
+.icon-spotify:before              { content: "\f013"; }
+.icon-dribbble-sign:before        { content: "\f014"; }
+.icon-dribbble:before             { content: "\f015"; }
+.icon-twitter-sign:before         { content: "\f016"; }
+.icon-twitter:before              { content: "\f017"; }
+.icon-facebook-sign:before        { content: "\f018"; }
+.icon-facebook:before             { content: "\f019"; }
+
+/* \f020 doesn't work in Safari. all shifted one down */
+.icon-bread-sign:before           { content: "\f021"; }
+.icon-bread:before                { content: "\f022"; }
+.icon-linkedin-sign:before        { content: "\f023"; }
+.icon-linkedin:before             { content: "\f024"; }
+.icon-github-sign:before          { content: "\f025"; }
+.icon-github:before               { content: "\f026"; }
+.icon-pinterest-sign:before       { content: "\f027"; }
+.icon-pinterest:before            { content: "\f028"; }
+.icon-vevo-sign:before            { content: "\f029"; }
+.icon-vevo:before                 { content: "\f030"; }
+.icon-wordpress-sign:before       { content: "\f031"; }
+.icon-wordpress:before            { content: "\f032"; }
+.icon-google-plus-sign:before     { content: "\f033"; }
+.icon-google-plus:before          { content: "\f034"; }
+.icon-foursquare-sign:before      { content: "\f035"; }
+.icon-foursquare:before           { content: "\f036"; }
+.icon-bebo-sign:before            { content: "\f037"; }
+.icon-bebo:before                 { content: "\f038"; }
+
+
+/* Social Identities */
+i.icon-facebook-sign,i.icon-facebook {
+  color:#3B5998;
+}
+i.icon-linkedin-sign,i.icon-linkedin {
+  color:#4875B4;
+}
+i.icon-instagram-sign,i.icon-instagram {
+  color:#3F729B;
+}
+i.icon-twitter-sign,i.icon-twitter {
+  color:#33CCFF;
+}
+i.icon-youtube-sign,i.icon-youtube {
+  color:#EB2629;
+}
+i.icon-google-plus-sign,i.icon-google-plus {
+  color:#303030;
+}
+i.icon-klout-sign,i.icon-klout {
+  color:#E24A25;
+}
+i.icon-spotify-sign,i.icon-spotify {
+  color:#75C044;
+}
+i.icon-dribbble-sign,i.icon-dribbble {
+  color:#EA4C89;
+}
+i.icon-github-sign,i.icon-github {
+  color:#000;
+}
+i.icon-yelp-sign,i.icon-yelp {
+  color:#CA3C27;
+}
+i.icon-tumblr-sign,i.icon-tumblr {
+  color:#45556B;
+}
+i.icon-pinterest-sign,i.icon-pinterest {
+  color:#CB2027;
+}
+
+
+
+/* Body Styles */
+
+body {
+  background:#000 url(../img/bg.jpg) repeat;
+  background-size:1600px;
+  font-family: "MissionGothicLight", "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.section {
+  padding:50px 0;
+  background:#fff;
+  width:100%;
+}
+.section-last {
+  margin-bottom:100px;
+}
+
+.section h2 {
+  margin-top:20px;
+}
+
+.section p,.section ul {
+  font-family: "MissionGothicLight", "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size:18px;
+  line-height:1.5em;
+  margin-bottom:2em;
+}
+.section p.big {
+  font-size:32px;
+  margin-bottom:.5em;
+}
+
+.header {
+  padding:20px 0;
+}
+
+.header .nav {
+  margin-top:10px;
+  float:right;
+  margin-bottom:0;
+}
+
+.header .nav li {
+  float:left;
+}
+
+.header .nav li a {
+  padding:10px;
+  font-size:20px;
+  text-transform:lowercase;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Arial", sans-serif;
+  font-weight:300;
+  font-stretch:normal;
+}
+
+.header .nav li.active a {
+  background:#eee;
+  color:#333;
+}
+
+.header h1.logo {
+  font-family: "BlanchCapsLight", "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Arial", sans-serif;
+  font-size:88px;
+  font-weight:normal;
+}
+.header h1.logo a {
+  color:#333;
+}
+.header h1.logo a:hover {
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: "BlanchCapsLight", "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Arial", sans-serif;
+  font-weight:normal;
+}
+
+h2,.h2 {
+  font-size:60px;
+  font-weight:normal;
+}
+h3,.h3 {
+  font-size:40px;
+}
+h4,.h4 {
+  font-size:30px;
+  font-weight:bold;
+}
+
+.body {
+  margin:80px 0;
+  background:rgba(255,255,255,.95);
+}
+
+.center {
+  text-align:center;
+}
+
+.framed {
+  border:1px solid #ccc;
+}
+
+.portfolio {
+  text-align:center;
+  padding:80px 0 120px;
+}
+
+.portfolio h2 {
+  margin-bottom:45px;
+}
+
+.portfolio a {
+  border:1px solid #ccc;
+  width:100%;
+  background:#fff url(../img/eskyinteractive.png) no-repeat center center;
+  overflow:hidden;
+  text-indent:-9999px;
+  display:block;
+  height:160px;
+}
+
+.portfolio a:hover {
+  border:1px solid #333;
+}
+
+.portfolio a.ning {
+  background-image:url(../img/ning.png);
+}
+.portfolio a.zerocater {
+  background-image:url(../img/zerocater.png);
+}
+.portfolio a.bread {
+  background-image:url(../img/bread.png);
+}
+
+.findme {
+  margin-bottom:100px;
+  text-align:center;
+  padding:20px 0;
+}
+
+.findme ul {
+  margin-left:-3px;
+}
+
+.findme ul li {
+  float:left;
+  width:102px;
+  height:170px;
+  text-align:center;
+  margin-left:2px;
+}
+
+.findme i {
+  font-size:129px;
+  opacity:.9;
+  display:block;
+  margin:0 auto;
+  width:102px;
+}
+
+.findme a {
+}
+
+.findme a:hover {
+  text-decoration: none;
+}
+.findme a:hover i {
+  text-decoration: none;
+  opacity:1;
+  font-size:135px;
+  margin-top:-3px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+
+.aboutme {text-align:center;}
+.aboutme .profile-photo {
+  width:200px;
+  height:200px;
+  -webkit-border-radius:100px;
+  -mox-border-radius:100px;
+  border-radius:100px;
+  margin:15px auto;
+  background:url(https://secure.gravatar.com/avatar/7ff598f9462cd6df635706514b15998c?size=200);
+}
+
+
+/* Ning */
+
+.carousel {
+  text-align:center;
+  margin-bottom:0;
+}
+
+.carousel-inner {
+  box-shadow:0 0 25px #ccc;
+}
+
+.carousel-indicators {
+  top: 0;
+  right: 0;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-top:5px;
+}
+.carousel-indicators li {
+  background:#ccc;
+  background:rgba(0,0,0,.25);
+}
+.carousel-indicators li.active {
+  background:#666;
+}
+
+.carousel-control {
+  left: -132px;
+  width: 90px;
+  height: 90px;
+  margin-top: 0;
+  font-size: 135px;
+  line-height: 69px;
+  border: 0;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  border-radius: 45px;
+  background:#fff;
+  color:#ccc;
+}
+.carousel-control:hover, .carousel-control:focus {
+  color:#ccc;
+}
+.carousel-control.right {
+  right:-132px;
+  color:#666;
+}
+
+.ning,.zerocater,.bread {
+  margin-bottom:0;
+}
+
+.ning h2 {}
+
+.intro .span5 {
+  padding-top:100px;
+}
+.ning .intro .span10 {
+  text-align:left;
+}
+
+.eee {
+  background:#eee;
+}
+
+.pdd {
+  padding-bottom:0;
+  position:relative;
+  z-index:0;
+}
+
+
+.ning-rebranding {
+  padding:50px 0;
+  margin-bottom:0;
+}
+.ning-rebranding .carousel {
+  margin-top:25px;
+  width:344px;
+}
+
+.ning-rebranding .carousel-inner {
+  width:344px;
+  box-shadow: 0 0 0 #eee;
+}
+.ning-rebranding .carousel-indicators {
+  margin-top:15px;
+}
+
+.ning-home {
+  position:relative;
+  z-index:1;
+}
+
+.ning-office .span8,
+.mogwee-live .span6,
+.ning-home .span8,
+.section .photo {
+  padding-top:40px;
+}
+
+.esky {
+  margin-bottom:0;
+}
+.esky .intro .span5 {
+  text-align:center;
+  padding-top:100px;
+}
+
+.ratings {
+  padding-bottom:40px;
+}
+.ratings p {
+  margin-bottom:15px;
+}
+
+
+.footer {
+  color:#fff;
+  background:#1f657f;
+  padding:0;
+}
+
+.footer p,.footer li {
+  font-size:14px;
+}
+
+.footer .span4 {
+  margin-left:0;
+}
+
+.footer .footer-section {
+  border-right:1px solid #215d7f;
+  border-left:1px solid #277fa0;
+  overflow:hidden;
+  padding:30px;
+  height:200px;
+}
+
+.footer .footer-section.first {
+  padding-left:0;
+  border-left:0;
+}
+.footer .footer-section.last {
+  padding-right:0;
+  border-right:0;
+}
+
+.footer a {
+  color:#fff;
+  text-decoration: underline;
+}
+
+.footer ul.unstyled {
+  margin-right:25px;
+}
+
+.list-view {
+  /*-webkit-transform: scale(1);*/
+  /*-webkit-transition: all 1s ease;*/
+}
+.detail-view {
+  /*-webkit-transform: scale(.5);*/
+  -webkit-transition: all 1s ease;
+}
+
+.detail-view .section.portfolio {
+  padding: 0;
+  margin: 0;
+  /*-webkit-transform: scale(.5);*/
+  -webkit-transition: all 1s ease;
+}
+
+.detail-view .section.portfolio h2 {
+  display: none;
+}
+
+.page-about .page-inner .container {
+  -webkit-transform: scale(.5);
+  -webkit-transition: all 1s ease;
+}
