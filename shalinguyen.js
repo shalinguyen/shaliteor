@@ -30,25 +30,34 @@ if (Meteor.isClient) {
 
   Template.portfolio.preserve([".js-preserve"]);
 
-  var PageRouter = Backbone.Router.extend({
-    routes: {
-      "": "portfolioPage",
-      "portfolio": "portfolioPage",
-      "portfolio/:section": "portfolioPage",
-      ":page": "topLevelPage"
-    },
-    topLevelPage: function(page) {
-      Session.set("selectedPage", page);
-    },
-    portfolioPage: function(portfolioPage) {
-      Session.set("selectedPage", "portfolio");
-      Session.set("selectedPortfolioPage", portfolioPage);
-    }
+
+  Meteor.startup(function () {
+    var PageRouter = Backbone.Router.extend({
+      routes: {
+        "": "portfolioPage",
+        "portfolio": "portfolioPage",
+        "portfolio/:section": "portfolioPage",
+        ":page": "topLevelPage"
+      },
+      initialize: function(options) {
+        var $body = $("body");
+        this.on("all", function() {
+          $body.attr("class", Backbone.history.getFragment());
+        });
+      },
+      topLevelPage: function(page) {
+        Session.set("selectedPage", page);
+      },
+      portfolioPage: function(portfolioPage) {
+        Session.set("selectedPage", "portfolio");
+        Session.set("selectedPortfolioPage", portfolioPage);
+      }
+    });
+
+    router = new PageRouter;
+
+    Backbone.history.start({pushState: true});
   });
-
-  router = new PageRouter;
-
-  Backbone.history.start({pushState: true});
 
   // All navigation that is relative should be passed through the navigate
   // method, to be processed by the router. If the link has a `data-bypass`
