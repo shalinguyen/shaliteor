@@ -356,9 +356,13 @@ body.ning {
 }
 
 .section {
-  padding:50px 0;
+  padding:120px 0;
   background:#fff;
   width:100%;
+}
+.overview {
+  background:rgba(255,255,255,.95);
+  margin:100px 0;
 }
 .section-last {
   margin-bottom:0;
@@ -449,16 +453,16 @@ h4,.h4 {
   border:1px solid #ccc;
 }
 
-.portfolio {
+.page-portfolio .portfolio {
   text-align:center;
   padding:80px 0 120px;
 }
 
-.portfolio h2 {
+.page-portfolio h2 {
   margin-bottom:45px;
 }
 
-.portfolio a {
+.page-portfolio .portfolio a {
   border:1px solid #ccc;
   width:100%;
   background:#fff url(../img/eskyinteractive.png) no-repeat center center;
@@ -468,24 +472,24 @@ h4,.h4 {
   height:160px;
 }
 
-.portfolio a:hover {
+.page-portfolio .portfolio a:hover {
   border:1px solid #333;
 }
 
-.portfolio a.ning {
+.page-portfolio .portfolio a.ning {
   background-image:url(../img/ning.png);
 }
-.portfolio a.zerocater {
+.page-portfolio .portfolio a.zerocater {
   background-image:url(../img/zerocater.png);
 }
-.portfolio a.bread {
+.page-portfolio .portfolio a.bread {
   background-image:url(../img/bread.png);
 }
 
 .findme {
   text-align:center;
   padding:20px 0;
-  background:rgba(255,255,255,.9);
+  background:#fff;
 }
 
 .findme ul {
@@ -587,10 +591,6 @@ h4,.h4 {
   color:#666;
 }
 
-.ning,.zerocater,.bread {
-  margin-bottom:0;
-}
-
 .ning h2 {}
 
 .intro .span5 {
@@ -610,11 +610,6 @@ h4,.h4 {
   z-index:0;
 }
 
-
-.ning-rebranding {
-  padding:50px 0;
-  margin-bottom:0;
-}
 .ning-rebranding .carousel {
   margin-top:25px;
   width:344px;
