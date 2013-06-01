@@ -31,12 +31,8 @@ Meteor.startup ->
       $body = $("body")
 
       @on "all", (route, params...) ->
-        pathArray = params
-        pathArray.reverse()
-        pathArray.push(route.split(":")[1])
-        pathArray.reverse()
-
-        $body.attr "class", pathArray.join(" ")
+        params.unshift(route.split(":")[1])
+        $body.attr "class", params.join(" ")
 
     about: ->
       Session.set "selectedPage", "about"
