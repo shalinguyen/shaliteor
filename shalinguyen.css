@@ -360,6 +360,9 @@ body.ning {
   background:#fff;
   width:100%;
 }
+.page-about .section,.page-contact .section {
+  padding:50px 0;
+}
 .overview {
   background:rgba(255,255,255,.95);
   margin:100px 0;
@@ -685,6 +688,12 @@ h4,.h4 {
 .footer a {
   color:#fff;
   text-decoration: underline;
+}
+
+.contact input,.contact textarea {
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
 }
 
 
