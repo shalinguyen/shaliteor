@@ -727,6 +727,17 @@ h4,.h4 {
   margin-right:25px;
 }
 
+/* Twitter */
+
+#s-recent-tweets span {
+  font-size:20px;
+  display:block;
+  line-height:1.25em;
+  margin-bottom:.25em;
+}
+
+/* Portfolio Navs */
+
 .page-portfolio .overview {
   margin-top:0;
 }
