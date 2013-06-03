@@ -80,6 +80,9 @@ Meteor.startup ->
       $body = $("body")
 
       @on "all", (route, params...) ->
+        url = Backbone.history.getFragment()
+        _gaq?.push(['_trackPageview', "/#{url}"])
+
         params.unshift(route.split(":")[1])
         $body.attr "class", params.join(" ")
 
