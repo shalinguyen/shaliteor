@@ -137,9 +137,32 @@
 </template>
 
 <template name="contact">
-  <div class="section body">
+  <div class="section body contact">
     <div class="container">
       <h2>Contact me</h1>
+      <div class="row">
+        <form class="span6">
+          <div class="control-group">
+            <label for="name">Name</label>
+            <div class="controls">
+              <input type="text" class="span6">
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="subject">Subject</label>
+            <div class="controls">
+              <input type="text" class="span6">
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="message">Message</label>
+            <div class="controls">
+              <textarea class="span6" rows="4"></textarea>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-large btn-block">Submit</a>
+        </form>
+      </div>
     </div>
   </div>
 </template>
