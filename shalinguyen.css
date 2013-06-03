@@ -668,7 +668,6 @@ h4,.h4 {
 }
 .esky .intro .span5 {
   text-align:center;
-  padding-top:100px;
 }
 
 .ratings {
@@ -796,4 +795,135 @@ h4,.h4 {
 
 .detail-view .section.portfolio h2 {
   display: none;
+}
+
+
+
+
+/* Mobile Styles */
+
+/* IE8
+-----------------------------*/
+.ie8 {
+  .mobile-only {
+    display:none !important;
+  }
+  td.mobile-only {
+    display:table-cell;
+  }
+  .desktop-only {
+    display:block;
+  }
+}
+
+@media all and (max-width: 568px), only screen and (min-device-width: 640px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
+  .mobile-only {
+    display:block;
+  }
+  td.mobile-only {
+    display:table-cell;
+  }
+  .desktop-only {
+    display:none;
+  }
+  [class*="span"],.row,object {
+    float:none;
+    margin-left:0;
+    width:100%;
+  }
+  .container {
+    padding:5%;
+    width:auto;
+  }
+  .header .nav li a {
+    font-size:16px;
+    padding:8px;
+  }
+  .header h1.logo {
+    width:287px;
+    margin:0 auto;
+    height: 63px;
+    line-height: 77px;
+  }
+  .header .container {
+    padding:0;
+  }
+  .header .nav {
+    width:242px;
+    margin:20px auto 0;
+    float:none;
+    overflow:hidden;
+  }
+  .findme {
+    padding-top:20px !important;
+  }
+  .findme ul li {
+    height:125px;
+    width:95px;
+  }
+  .page-portfolio .list-view .portfolio {
+    padding-top:0;
+    padding-bottom:0;
+    margin-top:0;
+  }
+  .page-portfolio .list-view .span3 {
+    width:auto;
+    margin-bottom:5%;
+  }
+  .page-portfolio .portfolio a {
+    width:auto;
+  }
+  .section p.big {
+    font-size:24px;
+  }
+  .section [class*="span"] {
+    width:100%;
+    margin:0;
+    overflow:hidden;
+  }
+  .section {
+    padding:50px 0;
+  }
+  .section.header {
+    padding:10px 0 25px;
+  }
+  .detail-view .section.portfolio {
+    margin-left: 5%;
+  }
+  .detail-view .section.portfolio .span3 {
+    float:left;
+    width:65px;
+    margin-left:0;
+    margin-right:8px;
+  }
+  .detail-view .section.portfolio a {
+    width:65px;
+  }
+  .detail-view .container {
+    padding:0;
+  }
+  .intro .span5 {
+    padding-top:0;
+    margin-bottom:2em;
+  }
+  .ratings .span4 {
+    margin-bottom:1em;
+  }
+  .framed {
+    width:99%;
+  }
+  .overview {
+    margin-bottom:0;
+  }
+  .footer .footer-section {
+    border:0;
+    padding:0;
+    height:160px;
+  }
+  .carousel-control.right {
+    right:0;
+  }
+  .carousel-control.left {
+    left:0;
+  }
 }
