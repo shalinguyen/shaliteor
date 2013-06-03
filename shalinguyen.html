@@ -6,9 +6,11 @@
 </head>
 
 <body>
+  <div id="body" data-0="background-position:0px 0px;" data-100000="background-position:0px -50000px;">
   {{> header}}
   {{> page}}
   {{> footer}}
+  </div>
 </body>
 
 <template name="navigation">
@@ -64,17 +66,16 @@
           <div class="footer-section first">
             <h4>Sitemap</h4>
             <ul class="unstyled pull-left">
-              <li><a href="/">Portfolio</a></li>
-              <li><a href="/">About Me</a></li>
-              <li><a href="/">Blog</a></li>
-              <li><a href="/">Travel</a></li>
-              <li><a href="/">Contact</a></li>
+              <li><a href="/portfolio">Portfolio</a></li>
+              <li><a href="/about">About Me</a></li>
+              <li><a href="http://shalinguyen.tumblr.com">Blog</a></li>
+              <li><a href="/contact">Contact</a></li>
             </ul>
             <ul class="unstyled pull-left">
-              <li><a href="/">Esky Interactive</a></li>
-              <li><a href="/">Ning</a></li>
-              <li><a href="/">ZeroCater</a></li>
-              <li><a href="/">Bread</a></li>
+              <li><a href="/portfolio/esky">Esky Interactive</a></li>
+              <li><a href="/portfolio/ning">Ning</a></li>
+              <li><a href="/portfolio/zerocater">ZeroCater</a></li>
+              <li><a href="/portfolio/bread">Bread</a></li>
             </ul>
           </div>
         </div>
@@ -124,10 +125,13 @@
       <div class="row">
         <div class="span12">
           <div class="profile-photo"></div>
-          <p class="big">Howdy!</p>
-          <p>I am the Director of Design at <a href="http://bre.ad" target="_blank">Bread</a>, a technology platform for distributing full-page ads across social media influencers. I oversee and work on Bread's brand, positioning, marketing, product design and UI/UX optimization.</p>
-          <p>Previously, I was Director of Design at <a href="http://zerocater.com" target="_blank">ZeroCater</a>, managing and creating a design foundation for the brand and product. Prior to that I was Lead Designer at <a href="http://ning.com" target="_blank">Ning</a> responsible for the design and development of social networks for Ning’s strategic partners, including Enrique Iglesias, Linkin Park, GovLoop and VA gubernatorial candidate Bob McDonnell. Additionally, I also managed Ning's visual branding, designed all marketing communication materials (web, email, collateral, and events) and assisted with product features from concept to implementation. <a href="http://3marketeers.com">3marketeers Advertising</a> was where I started my career as a Web Designer working with clients such as Cisco, Teneros and UCSF. I also spent time at ad agency <a href="http://mckinney.com" target="_blank">Mckinney</a> in N.C. working on the Virgin Atlantic, Qwest, and NBC accounts.<p>
-          <p>I served on the board for the Silicon Valley chapter of the American Advertising Federation from 2008-2011, serving as President in 2010-2011. I am also a member of the Interaction Design Association (IxDA SF), the American Institute of Graphic Arts (AIGA), and an alumnus of the Multicultural Advertising Intern Program (MAIP). I hold a B.S. in Business Administration/Marketing and a graphic design minor from University of the Pacific in Stockton, Calif.</p>
+          <p class="big">Howdy! I am a San Francisco based designer specializing in interface design, frontend development, communication design and branding. My toolbox includes HTML/CSS (but prefer SCSS), Photoshop and Illustrator. I've done frontend templating across most platforms including Grails, Django/Python and most recently Meteor (for this site).</p>
+          <div class="left-align">
+            <h3>My Bio</h3>
+            <p>I am the Director of Design at <a href="http://bre.ad" target="_blank">Bread</a>, a technology platform for distributing full-page ads across social media influencers. I oversee and work on Bread's brand, positioning, marketing, product design and UI/UX optimization.</p>
+            <p>Previously, I was Director of Design at <a href="http://zerocater.com" target="_blank">ZeroCater</a>, managing and creating a design foundation for the brand and product. Prior to that I was Lead Designer at <a href="http://ning.com" target="_blank">Ning</a> responsible for the design and development of social networks for Ning’s strategic partners, including Enrique Iglesias, Linkin Park, GovLoop and VA gubernatorial candidate Bob McDonnell. Additionally, I also managed Ning's visual branding, designed all marketing communication materials (web, email, collateral, and events) and assisted with product features from concept to implementation. <a href="http://3marketeers.com">3marketeers Advertising</a> was where I started my career as a Web Designer working with clients such as Cisco, Teneros and UCSF. I also spent time at ad agency <a href="http://mckinney.com" target="_blank">Mckinney</a> in N.C. working on the Virgin Atlantic, Qwest, and NBC accounts.<p>
+            <p>I served on the board for the Silicon Valley chapter of the American Advertising Federation from 2008-2011, serving as President in 2010-2011. I am also a member of the Interaction Design Association (IxDA SF), the American Institute of Graphic Arts (AIGA), and an alumnus of the Multicultural Advertising Intern Program (MAIP). I hold a B.S. in Business Administration/Marketing and a graphic design minor from University of the Pacific in Stockton, Calif.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -135,15 +139,38 @@
 </template>
 
 <template name="contact">
-  <div class="section body">
+  <div class="section body contact">
     <div class="container">
       <h2>Contact me</h1>
+      <div class="row">
+        <form class="span6">
+          <div class="control-group">
+            <label for="name">Name</label>
+            <div class="controls">
+              <input type="text" class="span6">
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="subject">Subject</label>
+            <div class="controls">
+              <input type="text" class="span6">
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="message">Message</label>
+            <div class="controls">
+              <textarea class="span6" rows="4"></textarea>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-large btn-block">Submit</a>
+        </form>
+      </div>
     </div>
   </div>
 </template>
 
 <template name="ning">
-  <div class="section ning">
+  <div class="section overview ning">
     <div class="container">
       <div class="row intro">
         <div class="span5">
@@ -160,6 +187,12 @@
     <div class="container">
       <div class="row">
         <div class="span12">
+          <div class="tags">
+            <span class="label label-inverse">Visual Design</span>
+            <span class="label label-inverse">Photoshop</span>
+            <span class="label label-inverse">CSS</span>
+            <span class="label label-inverse">jQuery</span>
+          </div>
           <h3>Partner Design &amp; Development</h3>
           <p>A huge part of my role at Ning was to design and define how beautiful a social network on Ning could be. Our team worked with a variety of showcase clients and we would push the limits of what was possible on the Ning platform. The platform at the time had very limited access to templating and HTML, so most of what was possible had to be done purely with CSS and Javascript. To the right, you will see examples of Ning networks that I designed and developed.</p>
           <div id="pdd" class="carousel slide">
@@ -220,6 +253,12 @@
     <div class="container">
       <div class="row">
         <div class="span4">
+          <div class="tags">
+            <span class="label label-inverse">Branding</span>
+            <span class="label label-inverse">Visual Design</span>
+            <span class="label label-inverse">Photoshop</span>
+            <span class="label label-inverse">UX</span>
+          </div>
           <h3>Ning Homepage</h3>
           <p>In 2009, I got the opportunity to work with the product team to redesign the Ning homepage. The product team wanted to increase traffic towards easy network creation along with balancing discovery of Ning networks for community growth as well. Shortly after it was released, the <a href="http://www.shalinguyen.com/websites/ning-homepage/" target="_blank">new homepage received recognition</a> from Ryan Carson of Carsonified/Think Vitamin.</p>
           <p>During that process, I learned that we didn't have a proper defined style guide so I took the initiative to put one together while designing the new homepage. This lead to my transition to managing the Ning brand.</p>
@@ -238,6 +277,11 @@
         </div>
         <div class="span1"></div>
         <div class="span5">
+          <div class="tags">
+            <span class="label label-inverse">Branding</span>
+            <span class="label label-inverse">Visual Design</span>
+            <span class="label label-inverse">Illustrator</span>
+          </div>
           <h3>Ning's Rebranding</h3>
           <p>As time went on, we went through rebranding efforts with a design agency. After we finalized a new logo, I began work to give all of our satellite properties a proper facelift (our blog, help center, API pages, about, homepage, and so on) along with updating our marketing materials and even our email signatures for consistency. Additionally, I transformed our original PDF styleguide to an online styleguide so that it was accessible to all teams across the company.</p>
           <h4>New business cards</h4>
@@ -281,6 +325,11 @@
     <div class="container">
       <div class="row">
         <div class="span4">
+          <div class="tags">
+            <span class="label label-inverse">Branding</span>
+            <span class="label label-inverse">Photoshop</span>
+            <span class="label label-inverse">Illustrator</span>
+          </div>
           <h3>Ning Office Redesign</h3>
           <p>This was one of my favorite projets at Ning. For about 3 months, I worked secretly with a few members of the design team and our head of Marketing to completely revamp and design the office.</p>
           <p>We named each room after a popular Ning social network. From there, I worked with an interior designer to narrow down furniture choices, wall colors and art. I was able to get Tony Hawk to donate some skateboards for our Shred or Die room. We also created giant wall decals to give each room a personal touch from design assets we had used to design a lot of the networks.</p>
@@ -295,6 +344,12 @@
     <div class="container">
       <div class="row">
         <div class="span12">
+          <div class="tags">
+            <span class="label label-inverse">Branding</span>
+            <span class="label label-inverse">Product Design</span>
+            <span class="label label-inverse">Photoshop</span>
+            <span class="label label-inverse">UX</span>
+          </div>
           <h3>Ning Dashboard</h3>
           <p>At the time, Ning's administrative interface was styled and themed based off of the network's design theme. This caused an array of problems including differentiating the administrative dashboard from the actual site and everytime we had a new feature, we'd have to make sure the dashboard options would adapt across any theme possible (colors, icons, font sizes, font choices, etc).</p>
           <p>The design team and I pushed for a Ning themed administrative dashboard much like other great CMS platforms out there like Wordpress and Shopify. This proved to be quite and undertaking but eventually the battle was won and Ning has a uniform dashboard today. This was my proposed version of the design.</p>
@@ -307,6 +362,12 @@
     <div class="container">
       <div class="row">
         <div class="span5 photo">
+          <div class="tags">
+            <span class="label label-inverse">Branding</span>
+            <span class="label label-inverse">Product Design</span>
+            <span class="label label-inverse">Photoshop</span>
+            <span class="label label-inverse">UX</span>
+          </div>
           <h3>Ning iPhone Login Screen</h3>
           <p>The product team had me work on an iPhone login screen design for Ning's social network management iPhone app.</p>
         </div>
@@ -320,6 +381,12 @@
     <div class="container">
       <div class="row">
         <div class="span5">
+          <div class="tags">
+            <span class="label label-inverse">Visual Design</span>
+            <span class="label label-inverse">Event Planning</span>
+            <span class="label label-inverse">Photoshop</span>
+            <span class="label label-inverse">Illustrator</span>
+          </div>
           <h3>Mogwee Live @ SXSW 2011</h3>
           <p>Mogwee, a group messenger application on iPhone &amp; Android, was getting ready to do a launch. The plan was to launch the app at SXSW. The marketing manager and I devised an event planning strategy and we hit the ground running. I worked with our design team to create a beautiful brand for the event which we then used the style to execute posters of all sizes, event signage, an event website, badges, marketing materials, social media invitations and so on.</p>
           <p>We also worked with a local Austin promotions team to make sure posters were visible all over downtown. We ended up with over 10K+ RSVPs, kept the house packed at 2500 capacity all night long with lines stretching down the block. The event was a huge success with social media buzz leading up to the event and throughout the night.</p>
@@ -334,7 +401,7 @@
 </template>
 
 <template name="esky">
-  <div class="section esky">
+  <div class="section overview esky">
     <div class="container">
       <div class="row intro">
         <div class="span5">
@@ -351,7 +418,16 @@
     <div class="container">
       <div class="row">
         <div class="span12">
+          <div class="tags">
+            <span class="label label-inverse">Visual Design</span>
+            <span class="label label-inverse">HTML</span>
+            <span class="label label-inverse">CSS</span>
+            <span class="label label-inverse">Wordpress</span>
+            <span class="label label-inverse">Photoshop</span>
+            <span class="label label-inverse">Illustrator</span>
+          </div>
           <h3>Our recent clients</h3>
+          <p>This is a sampling of our recent client work including <a href="http://class.stanford.edu" target="_blank">Stanford Online</a>, Gloria Feldt's <a href="http://taketheleadwomen.com" target="_blank">Take the Lead</a> and Soleil Moonfrye's <a href="http://moonfrye.com" target="_blank">Moonfrye.com</a>.</p>
           <div id="esky" class="carousel slide">
             <ol class="carousel-indicators">
               <li data-target="#esky" data-slide-to="0" class="active"></li>
@@ -362,13 +438,13 @@
             </ol>
             {{! Carousel items }}
             <div class="carousel-inner">
+              <div class="active item">
+                <img src="/img/portfolio/stanford.jpg" alt="Stanford Online" />
+              </div>
               <div class="item">
                 <img src="/img/portfolio/moonfrye.jpg" alt="Moonfrye" />
               </div>
               <div class="item">
-                <img src="/img/portfolio/stanford.jpg" alt="Stanford Online" />
-              </div>
-              <div class="active item">
                 <img src="/img/portfolio/gillandcombs.jpg" alt="Gill &amp; Combs" />
               </div>
               <div class="item">
@@ -389,7 +465,7 @@
 </template>
 
 <template name="bread">
-  <div class="section bread">
+  <div class="section overview bread">
     <div class="container">
       <div class="row intro">
         <div class="span5">
@@ -408,6 +484,13 @@
     <div class="container">
       <div class="row">
         <div class="span12">
+          <div class="tags">
+            <span class="label label-inverse">Product Design</span>
+            <span class="label label-inverse">HTML</span>
+            <span class="label label-inverse">SCSS</span>
+            <span class="label label-inverse">Photoshop</span>
+            <span class="label label-inverse">UX</span>
+          </div>
           <h3>Bread Pro</h3>
           <p>Bread Pro is the product for advertisers to create and manage their ad programs and campaigns. Within Bread Pro, you can design and create billboards with the Bread Billboard Editor.</p>
         </div>
@@ -428,6 +511,13 @@
     <div class="container">
       <div class="row">
         <div class="span12">
+          <div class="tags">
+            <span class="label label-inverse">Product Design</span>
+            <span class="label label-inverse">HTML</span>
+            <span class="label label-inverse">SCSS</span>
+            <span class="label label-inverse">Photoshop</span>
+            <span class="label label-inverse">UX</span>
+          </div>
           <h3>Bread Billboard Editor</h3>
           <p>We wanted to make ad creation on the Bread Platform extremely easy for brands and marketers. With that in mind, I designed Bread's billboard editor with the ability to design in both mobile and desktop views. The billboard editor is also a widget based system which allows us to add drag-and-drop features like text, image, video, paypal, social integration and more.</p>
           <h4>Editor view</h4>
@@ -442,6 +532,13 @@
     <div class="container">
       <div class="row">
         <div class="span12">
+          <div class="tags">
+            <span class="label label-inverse">Product Design</span>
+            <span class="label label-inverse">HTML</span>
+            <span class="label label-inverse">SCSS</span>
+            <span class="label label-inverse">Photoshop</span>
+            <span class="label label-inverse">UX</span>
+          </div>
           <h3>Bread Share Flow</h3>
           <p>On the consumer side, Bread allows you to easily share content across social networks. This is a sample Bread share flow I designed for sharing a photo.</p>
           <h4>Share on Bread</h4>
@@ -462,6 +559,13 @@
     <div class="container">
       <div class="row">
         <div class="span12">
+          <div class="tags">
+            <span class="label label-inverse">Product Design</span>
+            <span class="label label-inverse">HTML</span>
+            <span class="label label-inverse">SCSS</span>
+            <span class="label label-inverse">Photoshop</span>
+            <span class="label label-inverse">UX</span>
+          </div>
           <h3>Bread Sponsorship Profile</h3>
           <p>I designed the sponsorship profile feature to allow users to create a profile on Bread that would encompass a summary of their social media influence. By connecting a few social networks like Facebook, Twitter, Klout and Instagram, you get: an overview of your social following, aggregation of influential tags and also be able to add projects to give a quick summary of what you are known for. We use these profiles to match users to brands for sponsorship opportunities.</p>
           <h4>Edit your profile</h4>
@@ -476,7 +580,7 @@
 </template>
 
 <template name="zerocater">
-  <div class="section zerocater">
+  <div class="section overview zerocater">
     <div class="container">
       <div class="row intro">
         <div class="span5">
@@ -494,6 +598,13 @@
     <div class="container">
       <div class="row">
         <div class="span12">
+          <div class="tags">
+            <span class="label label-inverse">Product Design</span>
+            <span class="label label-inverse">HTML</span>
+            <span class="label label-inverse">Photoshop</span>
+            <span class="label label-inverse">Illustrator</span>
+            <span class="label label-inverse">UX</span>
+          </div>
           <h3>ZeroCater Menu &amp; Ratings Feature</h3>
           <p>The goal was to increase awareness on ZeroCater's online menus along with increasing the number of ratings from company employees to improve the catering options that arrived to each company everyday. The first step was to redesign the online menu. Improvements included a clearer marked calendar date, highlighting meal item notes, making it easier to see you can rate not only the meal but also each item as well.</p>
           <p class="center"><img src="/img/portfolio/zerocater_menu.jpg" class="framed"></p>
@@ -523,6 +634,14 @@
     <div class="container">
       <div class="row">
         <div class="span12">
+          <div class="tags">
+            <span class="label label-inverse">Branding</span>
+            <span class="label label-inverse">Visual Design</span>
+            <span class="label label-inverse">HTML</span>
+            <span class="label label-inverse">CSS</span>
+            <span class="label label-inverse">Photoshop</span>
+            <span class="label label-inverse">UX</span>
+          </div>
           <h3>ZeroCater Homepage</h3>
           <p>I revamped the ZeroCater homepage to feature delicious food photography, focus on customer testimonials and highlight where we were featured in the news.</p>
           <p class="center"><img src="/img/portfolio/zerocater_homepage.jpg" class="framed"></p>
@@ -534,6 +653,11 @@
     <div class="container">
       <div class="row">
         <div class="span4">
+          <div class="tags">
+            <span class="label label-inverse">Branding</span>
+            <span class="label label-inverse">Visual Design</span>
+            <span class="label label-inverse">Photography</span>
+          </div>
           <h3>Building photography assets</h3>
           <p>How do we make our customers or potential customers extremely hungry? With delicious and beautiful photos of our food, of course! I found that we were lacking photography assets which would help me build and create new things. So I brough in my Canon EOS T2i along with my macro lense and made it a habit to take a photo of our lunches everyday. Over time, we built a pretty nice photography library.</p>
         </div>
@@ -547,6 +671,11 @@
     <div class="container">
       <div class="row">
         <div class="span6">
+          <div class="tags">
+            <span class="label label-inverse">Branding</span>
+            <span class="label label-inverse">Visual Design</span>
+            <span class="label label-inverse">Illustrator</span>
+          </div>
           <h3>ZeroCater Ads</h3>
           <p>I designed a series of ads for ZeroCater which ran on Highway 101, Transamerica Building and Muni busses around San Francisco. We commissioned a talented illustrator to create the hillarious worker chasing worker with knife and fork in hand.</p>
         </div>

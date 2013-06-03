@@ -47,6 +47,9 @@ Meteor.startup ->
   router = new PageRouter
   Backbone.history.start pushState: true
 
+  skrollr.init
+    forceHeight: false
+
 
 # All navigation that is relative should be passed through the navigate
 # method, to be processed by the router. If the link has a `data-bypass`
