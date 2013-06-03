@@ -727,6 +727,10 @@ h4,.h4 {
   margin-right:25px;
 }
 
+.page-portfolio .overview {
+  margin-top:0;
+}
+
 .list-view {
   /*-webkit-transform: scale(1);*/
   /*-webkit-transition: all 1s ease;*/
@@ -736,16 +740,45 @@ h4,.h4 {
   -webkit-transition: all 1s ease;
 }
 
+.detail-view .section.portfolio .span3 {
+  width:72px;
+  -webkit-transition: all 1s ease;
+}
+
 .detail-view .section.portfolio {
-  padding: 40px 0;
+  padding: 20px 0;
   margin: 0;
-  display:none;
   /*-webkit-transform: scale(.5);*/
   -webkit-transition: all 1s ease;
+  background:none;
 }
 
 .detail-view .section.portfolio a {
   height:100px;
+  -webkit-transition: all 1s ease;
+  width:70px;
+  height:70px;
+  margin:0 auto;
+}
+
+.detail-view .section.portfolio p {
+  display:none;
+}
+
+.detail-view .section.portfolio a.esky {
+  background-image:url(../img/esky_icon.png);
+  -webkit-transition: all 1s ease;
+}
+.detail-view .section.portfolio a.bread {
+  background-image:url(../img/bread_icon.png);
+  -webkit-transition: all 1s ease;
+}
+.detail-view .section.portfolio a.ning {
+  background-image:url(../img/ning_icon.png);
+  -webkit-transition: all 1s ease;
+}
+.detail-view .section.portfolio a.zerocater {
+  background-image:url(../img/zerocater_icon.png);
   -webkit-transition: all 1s ease;
 }
 

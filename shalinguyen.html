@@ -19,7 +19,7 @@
     <li class="{{pageActiveClass 'about'}}"><a href="/about">About</a></li>
     <li><a href="http://shalinguyen.tumblr.com" target="_blank">Blog</a></li>
     {{! <li><a href="/travel">Travel</a></li> }}
-    <li class="{{pageActiveClass 'contact'}}"><a href="/contact">Contact</a></li>
+    <li class="{{pageActiveClass 'contact'}}"><a href="mailto:shali@eskyinteractive.com" target="_blank">Contact</a></li>
   </ul>
 </template>
 
@@ -69,13 +69,13 @@
               <li><a href="/portfolio">Portfolio</a></li>
               <li><a href="/about">About Me</a></li>
               <li><a href="http://shalinguyen.tumblr.com">Blog</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><a href="mailto:shali@eskyinteractive.com" target="_blank">Contact</a></li>
             </ul>
             <ul class="unstyled pull-left">
-              <li><a href="/portfolio/esky">Esky Interactive</a></li>
+              <li><a href="/portfolio/bread">Bread</a></li>
               <li><a href="/portfolio/ning">Ning</a></li>
               <li><a href="/portfolio/zerocater">ZeroCater</a></li>
-              <li><a href="/portfolio/bread">Bread</a></li>
+              <li><a href="/portfolio/esky">Esky Interactive</a></li>
             </ul>
           </div>
         </div>
@@ -88,6 +88,7 @@
         <div class="span4">
           <div class="footer-section last">
             <h4>Latest tweet</h4>
+
           </div>
         </div>
       </div>
@@ -105,12 +106,13 @@
   <div class="{{portfolioNavigationClass}}">
     <div class="js-preserve section body portfolio">
       <div class="container">
-        <h2>Portfolio</h2>
+        <p class="big">I am a San Francisco based designer specializing in interface design, frontend development, communication design and branding.</p>
+        <h2>Portfolio Journeys</h2>
         <div class="row">
-          <div class="span3"><a href="/portfolio/esky" class="esky">Esky Interactive</a></div>
+          <div class="span3"><a href="/portfolio/bread" class="bread">Bread</a></div>
           <div class="span3"><a href="/portfolio/ning" class="ning">Ning</a></div>
           <div class="span3"><a href="/portfolio/zerocater" class="zerocater">ZeroCater</a></div>
-          <div class="span3"><a href="/portfolio/bread" class="bread">Bread</a></div>
+          <div class="span3"><a href="/portfolio/esky" class="esky">Esky Interactive</a></div>
         </div>
       </div>
     </div>
@@ -125,7 +127,7 @@
       <div class="row">
         <div class="span12">
           <div class="profile-photo"></div>
-          <p class="big">Howdy! I am a San Francisco based designer specializing in interface design, frontend development, communication design and branding. My toolbox includes HTML/CSS (but prefer SCSS), Photoshop and Illustrator. I've done frontend templating across most platforms including Grails, Django/Python and most recently Meteor (for this site).</p>
+          <p class="big">Howdy! I am a San Francisco based designer specializing in interface design, frontend development, communication design and branding. My toolbox includes Photoshop, Illustrator and HTML/CSS (SCSS preferred). I've done frontend templating across most platforms including Grails, Django/Python and most recently Meteor (for this site).</p>
           <div class="left-align">
             <h3>My Bio</h3>
             <p>I am the Director of Design at <a href="http://bre.ad" target="_blank">Bread</a>, a technology platform for distributing full-page ads across social media influencers. I oversee and work on Bread's brand, positioning, marketing, product design and UI/UX optimization.</p>
@@ -133,37 +135,6 @@
             <p>I served on the board for the Silicon Valley chapter of the American Advertising Federation from 2008-2011, serving as President in 2010-2011. I am also a member of the Interaction Design Association (IxDA SF), the American Institute of Graphic Arts (AIGA), and an alumnus of the Multicultural Advertising Intern Program (MAIP). I hold a B.S. in Business Administration/Marketing and a graphic design minor from University of the Pacific in Stockton, Calif.</p>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</template>
-
-<template name="contact">
-  <div class="section body contact">
-    <div class="container">
-      <h2>Contact me</h1>
-      <div class="row">
-        <form class="span6">
-          <div class="control-group">
-            <label for="name">Name</label>
-            <div class="controls">
-              <input type="text" class="span6">
-            </div>
-          </div>
-          <div class="control-group">
-            <label for="subject">Subject</label>
-            <div class="controls">
-              <input type="text" class="span6">
-            </div>
-          </div>
-          <div class="control-group">
-            <label for="message">Message</label>
-            <div class="controls">
-              <textarea class="span6" rows="4"></textarea>
-            </div>
-          </div>
-          <a class="btn btn-primary btn-large btn-block">Submit</a>
-        </form>
       </div>
     </div>
   </div>
