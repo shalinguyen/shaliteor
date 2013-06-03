@@ -1,6 +1,15 @@
 
 /* Site Styles */
 
+html, body {
+    height: 100%;
+}
+
+#body {
+    min-height: 100%;
+    _height: 100%; /* ie6 */
+}
+
 /* Fonts */
 
 @font-face {
@@ -330,27 +339,41 @@ i.icon-pinterest-sign,i.icon-pinterest {
   color:#CB2027;
 }
 
+/* Bootstrap overrides */
 
+.label {
+  padding:3px 8px;
+  -webkit-border-radius:8px;
+  -moz-border-radius:8px;
+  border-radius:8px;
+}
+
+.tags .label {
+  margin-bottom:5px;
+}
 
 /* Body Styles */
 
 body {
-  background:#000 url(../img/bg.jpg) repeat;
-  background-size:1600px;
   font-family: "MissionGothicLight", "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
-body.bread {
+#body {
+  background:#000 url(../img/bg.jpg) repeat;
+  background-size:1600px;
+}
+
+body.bread #body {
   background-image:url(../img/bg-bread.png);
   background-size:1400px;
 }
 
-body.zerocater {
+body.zerocater #body {
   background-image:url(../img/bg-zerocater.png);
   background-size:1400px;
 }
 
-body.ning {
+body.ning #body {
   background-image:url(../img/bg-ning.png);
   background-size:1400px;
 }
@@ -365,7 +388,7 @@ body.ning {
 }
 .overview {
   background:rgba(255,255,255,.95);
-  margin:100px 0;
+  margin:80px 0;
 }
 .section-last {
   margin-bottom:0;
@@ -383,7 +406,7 @@ body.ning {
 }
 .section p.big {
   font-size:32px;
-  margin-bottom:.5em;
+  margin:1em 0;
 }
 
 .header {
@@ -594,6 +617,10 @@ h4,.h4 {
   color:#666;
 }
 
+.left-align {
+  text-align:left;
+}
+
 .ning h2 {}
 
 .intro .span5 {
@@ -633,9 +660,8 @@ h4,.h4 {
 
 .ning-office .span8,
 .mogwee-live .span6,
-.ning-home .span8,
 .section .photo {
-  padding-top:40px;
+  padding-top:30px;
 }
 
 .esky {
@@ -711,17 +737,20 @@ h4,.h4 {
 }
 
 .detail-view .section.portfolio {
-  padding: 50px 0;
+  padding: 40px 0;
   margin: 0;
+  display:none;
   /*-webkit-transform: scale(.5);*/
   -webkit-transition: all 1s ease;
 }
 
-.detail-view .section.portfolio h2 {
-  display: none;
+.detail-view .section.portfolio a {
+  height:100px;
+  -webkit-transition: all 1s ease;
 }
 
-.page-about .page-inner .container {
-  -webkit-transform: scale(.5);
-  -webkit-transition: all 1s ease;
+
+
+.detail-view .section.portfolio h2 {
+  display: none;
 }
