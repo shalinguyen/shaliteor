@@ -536,9 +536,7 @@ h4,.h4 {
   display:block;
   margin:0 auto;
   width:102px;
-}
-
-.findme a {
+  -webkit-transform: scale(.9);
 }
 
 .findme a:hover {
@@ -549,6 +547,7 @@ h4,.h4 {
   opacity:1;
   font-size:135px;
   margin-top:-3px;
+  -webkit-transform: scale(.95);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
