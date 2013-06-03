@@ -10,3 +10,5 @@ jquery
 backbone
 spiderable
 coffeescript
+underscore
+email

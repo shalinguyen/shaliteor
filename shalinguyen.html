@@ -88,7 +88,7 @@
         <div class="span4">
           <div class="footer-section last">
             <h4>Latest tweet</h4>
-
+            <div id="s-recent-tweets"></div>
           </div>
         </div>
       </div>
@@ -472,7 +472,7 @@
           <p><img src="/img/portfolio/bread_pro-dashboard.jpg"></p>
         </div>
         <div class="span6">
-          <h4>Analytics</h4> 
+          <h4>Analytics</h4>
           <p><img src="/img/portfolio/bread_pro_analytics.jpg"></p>
         </div>
       </div>
@@ -547,7 +547,6 @@
       </div>
     </div>
   </div>
-  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </template>
 
 <template name="zerocater">
@@ -651,7 +650,9 @@
           <p>I designed a series of ads for ZeroCater which ran on Highway 101, Transamerica Building and Muni busses around San Francisco. We commissioned a talented illustrator to create the hillarious worker chasing worker with knife and fork in hand.</p>
         </div>
         <div class="span6">
-          <blockquote class="twitter-tweet pull-right" style="margin-left:20px"><p>The new ad from @<a href="https://twitter.com/zerocater">zerocater</a> on 101 S is a billboard done right</p>&mdash; BumeBox (@BumeBox) <a href="https://twitter.com/BumeBox/status/157615890110746627">January 13, 2012</a></blockquote>
+          {{#constant}}
+            <blockquote class="twitter-tweet pull-right" style="margin-left:20px"><p>The new ad from @<a href="https://twitter.com/zerocater">zerocater</a> on 101 S is a billboard done right</p>&mdash; BumeBox (@BumeBox) <a href="https://twitter.com/BumeBox/status/157615890110746627">January 13, 2012</a></blockquote>
+          {{/constant}}
         </div>
       </div>
       <div class="row">
@@ -661,5 +662,4 @@
       </div>
     </div>
   </div>
-  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </template>
